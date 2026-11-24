@@ -1,26 +1,132 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Design tokens — source of truth: docs/05-ui-ux-design.md, Part A.
+ * shadcn/ui components read the semantic variables (--primary, --border …);
+ * clinic-specific tokens (status, navy, tints) are exposed as Tailwind colours below.
+ * Dark mode is out of MVP scope, so only light values are defined.
+ */
 
 @theme inline {
+  --font-sans: var(--font-plex-arabic), Tahoma, system-ui, sans-serif;
+  --font-heading: var(--font-sans);
+
+  /* shadcn semantic colours */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand scale & neutrals (A2) */
+  --color-primary-50: #e7f6f8;
+  --color-primary-100: #c5eaef;
+  --color-primary-600: #0d7c8c;
+  --color-primary-700: #0a6370;
+  --color-navy-900: #0f2a43;
+  --color-text-secondary: #52637a;
+  --color-text-placeholder: #64748b;
+
+  /* Semantic (A2) */
+  --color-success: #15803d;
+  --color-success-tint: #f0fdf4;
+  --color-warning: #b45309;
+  --color-warning-tint: #fffbeb;
+  --color-danger: #b91c1c;
+  --color-danger-tint: #fef2f2;
+  --color-info: #1d4ed8;
+  --color-info-tint: #eff6ff;
+
+  /* Appointment status (A2) */
+  --color-status-booked: #1d4ed8;
+  --color-status-booked-tint: #eff6ff;
+  --color-status-checked-in: #b45309;
+  --color-status-checked-in-tint: #fffbeb;
+  --color-status-in-treatment: #6d28d9;
+  --color-status-in-treatment-tint: #f5f3ff;
+  --color-status-completed: #15803d;
+  --color-status-completed-tint: #f0fdf4;
+  --color-status-cancelled: #475569;
+  --color-status-cancelled-tint: #f1f5f9;
+  --color-status-no-show: #b91c1c;
+  --color-status-no-show-tint: #fef2f2;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 8px;
+  --background: #f7f9fb;
+  --foreground: #0f1e2e;
+  --card: #ffffff;
+  --card-foreground: #0f1e2e;
+  --popover: #ffffff;
+  --popover-foreground: #0f1e2e;
+  --primary: #0d7c8c;
+  --primary-foreground: #ffffff;
+  --secondary: #ffffff;
+  --secondary-foreground: #0f1e2e;
+  --muted: #f1f5f9;
+  --muted-foreground: #52637a;
+  --accent: #e7f6f8;
+  --accent-foreground: #0a6370;
+  --destructive: #b91c1c;
+  --border: #e3e8ee;
+  /* Input borders need ≥3:1 contrast (WCAG 1.4.11); #7c8ba1 = 3.5:1 on white.
+     Deviation from doc 05 A2 (which used #E3E8EE for inputs too) — cards keep #E3E8EE. */
+  --input: #7c8ba1;
+  --ring: #0d7c8c;
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html {
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    line-height: 1.5;
+  }
+  /* Arabic needs more vertical room (A3) */
+  html[lang="ar"] body {
+    line-height: 1.7;
+  }
+  /* Visible focus ring everywhere (Part D) */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  /* Numbers in tables, times and money line up (A3) */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }

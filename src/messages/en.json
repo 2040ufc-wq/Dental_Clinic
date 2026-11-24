@@ -1,0 +1,97 @@
+{
+  "common": {
+    "clinicName": "Smile Dental Clinic",
+    "tagline": "Caring for your smile starts with an easy appointment",
+    "switchLanguage": "عربي",
+    "switchLanguageLabel": "Switch to Arabic",
+    "simulatedMode": "Simulated mode — messages are not really sent. Test code: {code}",
+    "required": "required",
+    "comingSoonTitle": "This page is under construction",
+    "comingSoonBody": "This screen will be built in a later step of the plan.",
+    "signedInAs": "Signed in as {name} ({role})",
+    "signOut": "Sign out",
+    "backToLogin": "Back to sign in"
+  },
+  "roles": {
+    "admin": "Administrator",
+    "receptionist": "Receptionist",
+    "dentist": "Dentist",
+    "assistant": "Dental assistant"
+  },
+  "auth": {
+    "staff": {
+      "metaTitle": "Staff sign in",
+      "title": "Welcome back",
+      "subtitle": "Staff sign in",
+      "email": "Email",
+      "password": "Password",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "patientLink": "Are you a patient? Book or sign in with your mobile number"
+    },
+    "mfa": {
+      "title": "Two-step verification",
+      "subtitle": "Enter the 6-digit code from your authenticator app",
+      "codeLabel": "Verification code",
+      "digitLabel": "Digit {index} of 6",
+      "submit": "Verify",
+      "submitting": "Verifying…",
+      "useDifferentAccount": "Use a different account"
+    },
+    "enroll": {
+      "title": "Set up two-step verification",
+      "intro": "Administrator accounts require two-step verification to protect patient data.",
+      "step1": "1. Scan the code with an authenticator app (e.g. Google Authenticator or Microsoft Authenticator).",
+      "secretLabel": "Or enter this key manually:",
+      "copy": "Copy key",
+      "copied": "Copied",
+      "step2": "2. Enter the code shown in the app to confirm.",
+      "qrAlt": "QR code for setting up the authenticator app",
+      "submit": "Confirm and enable"
+    },
+    "forgot": {
+      "metaTitle": "Reset password",
+      "title": "Reset your password",
+      "subtitle": "Enter your email and we'll send you a link to reset your password.",
+      "submit": "Send link",
+      "submitting": "Sending…",
+      "sent": "If this email is registered, we've sent a reset link to it."
+    },
+    "patient": {
+      "metaTitle": "Patient sign in",
+      "title": "Sign in with your mobile",
+      "subtitle": "We'll send you a one-time code",
+      "mobile": "Mobile number",
+      "mobileHint": "Example: 5XXXXXXXX",
+      "sendCode": "Send code",
+      "sending": "Sending…",
+      "codeTitle": "Enter verification code",
+      "codeSentTo": "We sent a 6-digit code to {mobile}",
+      "verify": "Verify",
+      "verifying": "Verifying…",
+      "resendIn": "Resend in {time}",
+      "resend": "Resend code",
+      "changeNumber": "Change number",
+      "staffLink": "Staff sign in"
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "emailInvalid": "Enter a valid email address",
+    "mobileInvalid": "Enter a valid Saudi mobile number starting with 5 (9 digits)",
+    "codeInvalid": "Enter the 6-digit code"
+  },
+  "errors": {
+    "INVALID_CREDENTIALS": "Email or password is incorrect",
+    "ACCOUNT_INACTIVE": "Your account is inactive. Contact the clinic administrator.",
+    "RATE_LIMITED": "Too many attempts. Try again in 15 minutes.",
+    "MFA_INVALID": "The verification code is incorrect",
+    "OTP_INVALID": "Incorrect code. Attempts left: {attemptsLeft}",
+    "OTP_EXPIRED": "This code has expired. Request a new one.",
+    "OTP_LOCKED": "Too many attempts. Try again in 15 minutes.",
+    "INTERNAL_ERROR": "Something went wrong. Please try again."
+  }
+}
