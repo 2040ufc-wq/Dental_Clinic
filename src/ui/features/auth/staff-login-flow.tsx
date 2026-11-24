@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/shared/i18n/navigation";
 import { authService } from "@/ui/services/auth-service";
@@ -13,6 +14,15 @@ import { StaffLoginForm } from "./staff-login-form";
 type Step = "credentials" | "mfa" | "enroll";
 
 /**
+ * Only same-site paths are accepted as a return target ("/dashboard"), never "//evil.com"
+ * or "https://…", so the login page can't be abused to redirect users elsewhere.
+ */
+function safeReturnTo(value: string | null): string {
+  if (value && /^\/(?!\/)[\w\-/?=&%.]*$/.test(value) && !value.startsWith("/login")) return value;
+  return STAFF_HOME;
+}
+
+/**
  * Staff sign-in as a small state machine (docs/05 S1):
  *   credentials → (admin, 2FA set up)      → mfa    → home
  *   credentials → (admin, 2FA not set up)  → enroll → home
@@ -21,11 +31,12 @@ type Step = "credentials" | "mfa" | "enroll";
 export function StaffLoginFlow() {
   const t = useTranslations("auth.mfa");
   const router = useRouter();
+  const returnTo = safeReturnTo(useSearchParams().get("returnTo"));
   const [step, setStep] = useState<Step>("credentials");
 
   const finish = (user: StaffUser) => {
     saveSession(user);
-    router.replace(STAFF_HOME);
+    router.replace(returnTo);
   };
 
   const handleCredentials = (result: StaffLoginResult) => {

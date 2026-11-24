@@ -12,6 +12,118 @@
     "signOut": "Sign out",
     "backToLogin": "Back to sign in"
   },
+  "nav": {
+    "mainNav": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "soon": "Soon",
+    "dashboard": "Dashboard",
+    "today": "Today",
+    "myDay": "My day",
+    "calendar": "Calendar",
+    "appointments": "Appointments",
+    "patients": "Patients",
+    "dentists": "Dentists",
+    "schedules": "Schedules",
+    "schedule": "Schedule",
+    "mySchedule": "My schedule",
+    "myPatients": "My patients",
+    "payments": "Payments",
+    "reports": "Reports",
+    "notifications": "Notifications",
+    "auditLogs": "Audit logs",
+    "settings": "Settings"
+  },
+  "header": {
+    "alerts": "Alerts",
+    "unread": "{count, plural, =0 {No new alerts} one {# new alert} other {# new alerts}}",
+    "noAlerts": "No alerts",
+    "markAllRead": "Mark all as read",
+    "userMenu": "User menu",
+    "checkingSession": "Checking your sign-in…"
+  },
+  "status": {
+    "booked": "Booked",
+    "checked_in": "Checked-in",
+    "in_treatment": "In treatment",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "no_show": "No-show"
+  },
+  "dashboard": {
+    "metaTitle": "Dashboard",
+    "title": "Dashboard",
+    "periodLabel": "Period",
+    "period": { "today": "Today", "week": "This week", "month": "This month" },
+    "kpi": {
+      "appointments": "Appointments",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "noShow": "No-shows",
+      "patientsTotal": "Total patients",
+      "newPatients": "New patients",
+      "revenue": "Revenue collected",
+      "outstanding": "Outstanding balances"
+    },
+    "change": {
+      "up": "Up {value} vs previous period",
+      "down": "Down {value} vs previous period",
+      "same": "No change vs previous period"
+    },
+    "schedule": {
+      "title": "Today's appointments",
+      "openCalendar": "Open calendar",
+      "empty": "No appointments today",
+      "closed": "The clinic is closed today",
+      "more": "and {count} more"
+    },
+    "attention": {
+      "title": "Needs attention",
+      "pendingDiscounts": "Discounts awaiting approval",
+      "refundRequests": "Refund requests",
+      "possibleDuplicates": "Possible duplicate patients",
+      "failedNotifications": "Failed messages",
+      "overridesToday": "Override bookings today",
+      "allClear": "Nothing needs your attention"
+    },
+    "charts": {
+      "showTable": "Show as table",
+      "showChart": "Show as chart",
+      "trendTitle": "Appointments by status",
+      "trendSubtitleToday": "Today, by hour",
+      "trendSubtitle": "By day",
+      "time": "Time",
+      "day": "Day",
+      "total": "Total",
+      "series": {
+        "completed": "Completed",
+        "booked": "Upcoming",
+        "cancelled": "Cancelled",
+        "noShow": "No-show",
+        "billed": "Billed",
+        "collected": "Collected"
+      },
+      "revenueTitle": "Revenue",
+      "revenueSubtitle": "Last {days} days, in SAR",
+      "utilizationTitle": "Dentist utilization",
+      "utilizationSubtitle": "Booked minutes out of working hours",
+      "utilizationRow": "{booked} of {scheduled} minutes",
+      "upcomingTitle": "Next 7 days",
+      "upcomingBooked": "{count} booked",
+      "upcomingCancelled": "{count} cancelled",
+      "closed": "Closed"
+    },
+    "roleHome": {
+      "title": "Welcome, {name}",
+      "body": "The {role} dashboard will be built in a later step. The admin dashboard is ready now."
+    }
+  },
+  "states": {
+    "loading": "Loading…",
+    "loadFailed": "Couldn't load the data",
+    "loadFailedBody": "Something went wrong while loading this section.",
+    "retry": "Try again"
+  },
   "roles": {
     "admin": "Administrator",
     "receptionist": "Receptionist",

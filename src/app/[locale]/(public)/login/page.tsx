@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { AuthLayout } from "@/ui/features/auth/auth-layout";
@@ -17,7 +18,10 @@ export default async function StaffLoginPage({ params }: PageProps<"/[locale]/lo
   setRequestLocale(locale);
   return (
     <AuthLayout>
-      <StaffLoginFlow />
+      {/* Suspense: the flow reads ?returnTo= from the URL, which is only known per request */}
+      <Suspense>
+        <StaffLoginFlow />
+      </Suspense>
     </AuthLayout>
   );
 }

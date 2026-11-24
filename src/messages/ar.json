@@ -12,6 +12,118 @@
     "signOut": "تسجيل الخروج",
     "backToLogin": "العودة لتسجيل الدخول"
   },
+  "nav": {
+    "mainNav": "القائمة الرئيسية",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "soon": "قريبًا",
+    "dashboard": "لوحة التحكم",
+    "today": "اليوم",
+    "myDay": "يومي",
+    "calendar": "التقويم",
+    "appointments": "المواعيد",
+    "patients": "المرضى",
+    "dentists": "الأطباء",
+    "schedules": "الجداول",
+    "schedule": "الجدول",
+    "mySchedule": "جدولي",
+    "myPatients": "مرضاي",
+    "payments": "المدفوعات",
+    "reports": "التقارير",
+    "notifications": "الإشعارات",
+    "auditLogs": "سجل التدقيق",
+    "settings": "الإعدادات"
+  },
+  "header": {
+    "alerts": "التنبيهات",
+    "unread": "{count, plural, =0 {لا توجد تنبيهات جديدة} one {تنبيه جديد واحد} two {تنبيهان جديدان} few {# تنبيهات جديدة} many {# تنبيهًا جديدًا} other {# تنبيه جديد}}",
+    "noAlerts": "لا توجد تنبيهات",
+    "markAllRead": "تعليم الكل كمقروء",
+    "userMenu": "قائمة المستخدم",
+    "checkingSession": "جارٍ التحقق من تسجيل الدخول…"
+  },
+  "status": {
+    "booked": "محجوز",
+    "checked_in": "حضر",
+    "in_treatment": "قيد العلاج",
+    "completed": "مكتمل",
+    "cancelled": "ملغي",
+    "no_show": "لم يحضر"
+  },
+  "dashboard": {
+    "metaTitle": "لوحة التحكم",
+    "title": "لوحة التحكم",
+    "periodLabel": "الفترة",
+    "period": { "today": "اليوم", "week": "هذا الأسبوع", "month": "هذا الشهر" },
+    "kpi": {
+      "appointments": "المواعيد",
+      "completed": "المواعيد المكتملة",
+      "cancelled": "المواعيد الملغاة",
+      "noShow": "لم يحضروا",
+      "patientsTotal": "إجمالي المرضى",
+      "newPatients": "مرضى جدد",
+      "revenue": "الإيرادات المحصّلة",
+      "outstanding": "المبالغ المستحقة"
+    },
+    "change": {
+      "up": "ارتفاع {value} عن الفترة السابقة",
+      "down": "انخفاض {value} عن الفترة السابقة",
+      "same": "بدون تغيير عن الفترة السابقة"
+    },
+    "schedule": {
+      "title": "مواعيد اليوم",
+      "openCalendar": "فتح التقويم",
+      "empty": "لا توجد مواعيد اليوم",
+      "closed": "العيادة مغلقة اليوم",
+      "more": "و{count} مواعيد أخرى"
+    },
+    "attention": {
+      "title": "يحتاج إلى انتباهك",
+      "pendingDiscounts": "خصومات بانتظار الموافقة",
+      "refundRequests": "طلبات استرداد",
+      "possibleDuplicates": "ملفات مرضى قد تكون مكررة",
+      "failedNotifications": "رسائل فشل إرسالها",
+      "overridesToday": "حجوزات استثنائية اليوم",
+      "allClear": "لا يوجد ما يحتاج إلى انتباهك"
+    },
+    "charts": {
+      "showTable": "عرض كجدول",
+      "showChart": "عرض كرسم بياني",
+      "trendTitle": "المواعيد حسب الحالة",
+      "trendSubtitleToday": "اليوم، حسب الساعة",
+      "trendSubtitle": "حسب اليوم",
+      "time": "الوقت",
+      "day": "اليوم",
+      "total": "الإجمالي",
+      "series": {
+        "completed": "مكتمل",
+        "booked": "قادم",
+        "cancelled": "ملغي",
+        "noShow": "لم يحضر",
+        "billed": "المفوتر",
+        "collected": "المحصّل"
+      },
+      "revenueTitle": "الإيرادات",
+      "revenueSubtitle": "آخر {days} يومًا، بالريال السعودي",
+      "utilizationTitle": "نسبة إشغال الأطباء",
+      "utilizationSubtitle": "الدقائق المحجوزة من ساعات العمل",
+      "utilizationRow": "{booked} من {scheduled} دقيقة",
+      "upcomingTitle": "الأيام السبعة القادمة",
+      "upcomingBooked": "{count} محجوز",
+      "upcomingCancelled": "{count} ملغي",
+      "closed": "مغلق"
+    },
+    "roleHome": {
+      "title": "مرحبًا {name}",
+      "body": "لوحة {role} ستُبنى في خطوة لاحقة. لوحة المدير جاهزة الآن."
+    }
+  },
+  "states": {
+    "loading": "جارٍ التحميل…",
+    "loadFailed": "تعذّر تحميل البيانات",
+    "loadFailedBody": "حدث خطأ أثناء تحميل هذا الجزء.",
+    "retry": "إعادة المحاولة"
+  },
   "roles": {
     "admin": "مدير النظام",
     "receptionist": "موظف استقبال",

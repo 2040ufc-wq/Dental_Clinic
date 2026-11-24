@@ -4,11 +4,13 @@ import { cn } from "@/shared/lib/utils";
 interface ClinicLogoProps {
   /** "dark" for light backgrounds, "light" for the teal/navy brand panel */
   variant?: "dark" | "light";
+  /** Mark only (narrow headers); the name stays available to screen readers */
+  iconOnly?: boolean;
   className?: string;
 }
 
 /** Fictional clinic logo (UX-1 default): tooth mark + clinic name. */
-export function ClinicLogo({ variant = "dark", className }: ClinicLogoProps) {
+export function ClinicLogo({ variant = "dark", iconOnly = false, className }: ClinicLogoProps) {
   const t = useTranslations("common");
   return (
     <div className={cn("flex items-center gap-2.5", className)}>
@@ -27,6 +29,7 @@ export function ClinicLogo({ variant = "dark", className }: ClinicLogoProps) {
         className={cn(
           "text-base font-semibold leading-tight",
           variant === "dark" ? "text-navy-900" : "text-white",
+          iconOnly && "sr-only",
         )}
       >
         {t("clinicName")}
